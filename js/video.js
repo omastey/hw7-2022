@@ -1,4 +1,5 @@
 var video;
+var oldschool;
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window");
@@ -47,9 +48,10 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 
 document.querySelector("#vintage").addEventListener("click", function() {
-	console.log("Old School");
-	const list = video.classList;
-	list.add("css/.oldSchool");
-	list.toggle("css/.oldSchool");
+	video.classList.add("oldSchool");
+});
+
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove("oldSchool");
 });
 
